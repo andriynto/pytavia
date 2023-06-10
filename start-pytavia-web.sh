@@ -1,8 +1,8 @@
 #!/usr/bin/sh
 # use the same APPNAME in stop-pytavia-web.sh
-APPNAME=PYTAVIA
+APPNAME=AUTH_SERVICES
 HOST=localhost
-PORT=49000
+PORT=4901
 
 # ./start-pytavia-web.sh production 
 if [ ! -z "$1" ] && [ $1 = "production" ]; then
@@ -18,5 +18,4 @@ else
     export FLASK_APP=server.py
     export FLASK_ENV=development
     flask run --host=$HOST --port=$PORT
-
 fi
